@@ -3,11 +3,15 @@ import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
+import { Profile } from "@/components/profile" ; 
+import { Certificates } from "@/components/Certificates" ;
+import {OpenSourceContributions} from "@/components/Opensource" ;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { Certificate } from "crypto";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -49,7 +53,7 @@ export default function Page() {
           </Markdown>
         </BlurFade>
       </section>
-      <section id="work">
+      {/* <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
             <h2 className="text-xl font-bold">Work Experience</h2>
@@ -73,7 +77,7 @@ export default function Page() {
             </BlurFade>
           ))}
         </div>
-      </section>
+      </section> */}
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
@@ -195,6 +199,19 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
+      <div>
+      <h2 style={{marginLeft : '230px' ,marginBottom : '2px'}}  className="text-3xl font-bold tracking-tighter sm:text-5xl ">
+                  Profile
+                </h2>
+        <Profile></Profile>
+      </div>
+      <div>
+      
+            <OpenSourceContributions></OpenSourceContributions>
+          </div>
+          {/* <div>
+          <Certificates></Certificates>
+        </div> */}
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
@@ -208,17 +225,18 @@ export default function Page() {
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Want to chat? Just shoot me a dm{" "}
                 <Link
-                  href={DATA.contact.social.X.url}
+                  href='https://www.linkedin.com/in/abiral-jain-3b7004256/'
                   className="text-blue-500 hover:underline"
                 >
-                  with a direct question on twitter
+                  with a direct question on Linkedin
                 </Link>{" "}
-                and I&apos;ll respond whenever I can. I will ignore all
-                soliciting.
+                and I&apos;ll respond as soon as possible .
               </p>
             </div>
           </BlurFade>
+          
         </div>
+       
       </section>
     </main>
   );
