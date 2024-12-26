@@ -200,12 +200,9 @@ export default function Page() {
         </div>
       </section>
       <div>
-      <h2 style={{marginLeft : '230px' ,marginBottom : '2px'}}  className="text-3xl font-bold tracking-tighter sm:text-5xl ">
-                  Profile
-                </h2>
         <Profile></Profile>
       </div>
-      <div>
+      <div className="">
       
             <OpenSourceContributions></OpenSourceContributions>
           </div>

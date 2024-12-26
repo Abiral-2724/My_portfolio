@@ -89,6 +89,40 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Mystery Message",
+      href: "https://jobportal-youtube.onrender.com/",
+      dates: "November 2024 - December 2024",
+      active: true,
+      description:
+        "Developed a full-stack job portal website using the MERN stack, allowing users to browse and apply for jobs while enabling admins to register companies and post job openings. Implemented user authentication, advanced search, and filtering by location, salary, and job type. Built a secure backend API with Node.js, Express, and MongoDB.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "MongoDB",
+        "TailwindCSS",
+        "JWT",
+        "Bcrypt",
+        "Shadcn UI",
+        "ZOD",
+        "REST API",
+        "Resend"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://github.com/Abiral-2724/Ananomous-message-Nextjs.git",
+          icon: <Icons.globe className="size-3" />
+        },
+        {
+          type: "Source",
+          href: "https://github.com/Abiral-2724/Ananomous-message-Nextjs.git",
+          icon: <Icons.github className="size-3" />
+        }
+      ],
+      image: "",
+      video: "https://res.cloudinary.com/dgxtctnut/video/upload/v1728882074/jskw8tnny40rthd5chdh.mov"
+    },
+    {
       title: "Job Hunt",
       href: "https://jobportal-youtube.onrender.com/",
       dates: "July 2024 - Aug 2024",

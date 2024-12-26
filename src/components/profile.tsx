@@ -1,90 +1,92 @@
 import React from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const profiles = [
   {
     name: "LeetCode",
     avatarUrl: "https://avatars.githubusercontent.com/u/41718343?s=280&v=4",
     profileLink: "https://leetcode.com/u/abiraljain2004/",
+    description: "Data Structures & Algorithms"
   },
   {
     name: "GeeksforGeeks",
     avatarUrl: "https://cdn.icon-icons.com/icons2/3912/PNG/512/geeksforgeeks_logo_icon_248241.png",
     profileLink: "https://www.geeksforgeeks.org/user/abiral_274/",
+    description: "Programming & Interview Prep"
   },
   {
     name: "Coding Ninjas",
     avatarUrl: "https://media.licdn.com/dms/image/v2/D4D0BAQFGN6Sr_NqlUA/company-logo_200_200/company-logo_200_200/0/1688561179874?e=2147483647&v=beta&t=xvJIesZYoD6_xhHPu9aJ9eEmzRN1Wyn9KfxWq4wXINc",
     profileLink: "https://www.codingninjas.com/codestudio/profile/your-profile",
+    description: "Competitive Programming"
   },
   {
     name: "Codeforces",
     avatarUrl: "https://cdn-1.webcatalog.io/catalog/codeforces/codeforces-icon-filled-256.webp?v=1714773964567",
     profileLink: "https://codeforces.com/profile/abiral2004jain",
+    description: "Advanced Problem Solving"
   },
 ];
 
 export function Profile() {
   return (
-    <div className="min-h-screen bg-gradient-to-br to-gray-200 py-1">
-      <div className="container mx-auto px-4 py-8">
-        <p className="text-gray-700 text-center max-w-xl mx-auto mt-6 text-sm sm:text-base lg:text-lg">
-          I am a passionate full-stack developer with a strong focus on problem-solving and efficiency in code. 
-          My experience spans across various coding platforms like LeetCode, GeeksforGeeks, Coding Ninjas, and Codeforces, 
-          where I consistently challenge myself to solve complex problems and improve my skills. My dedication to continuous learning 
-          is reflected by number of questions solved across the platforms. Here are my coding profiles.
-        </p>
+    <div className="min-h-screen bg-background py-8 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
+            Coding Profiles
+          </h1>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base lg:text-lg leading-relaxed">
+            I am a passionate full-stack developer with a strong focus on problem-solving and efficiency in code. 
+            My experience spans across various coding platforms where I consistently challenge myself to solve complex problems 
+            and improve my skills.
+          </p>
+        </div>
         
-        <ul className="list-none space-y-4 mt-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
           {profiles.map((profile) => (
-            <li 
-              key={profile.name} 
-              className="relative flex flex-col sm:flex-row items-center p-3 sm:p-4 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 gap-3 sm:gap-0"
+            <Card 
+              key={profile.name}
+              className="group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 bg-card border border-border"
             >
-              <div className="flex items-center w-full sm:w-auto">
-                <Avatar className="border-2 border-gray-300 w-12 h-12 sm:w-10 sm:h-10 shadow-md mr-3">
-                  <AvatarImage
-                    src={profile.avatarUrl}
-                    alt={`${profile.name} Avatar`}
-                    className="object-cover rounded-full"
-                  />
-                  <AvatarFallback className="bg-blue-100 text-blue-600">
-                    {profile.name.charAt(0)}
-                  </AvatarFallback>
-                </Avatar>
-                <div className="flex-grow">
-                  <h2 className="font-semibold text-base sm:text-lg text-gray-800 text-center sm:text-left" style={{ fontFamily: 'serif' }}>
-                    {profile.name}
-                  </h2>
+              <CardContent className="p-6">
+                <div className="flex items-start space-x-4">
+                  <Avatar className="w-16 h-16 rounded-lg border-2 border-border shadow-md">
+                    <AvatarImage
+                      src={profile.avatarUrl}
+                      alt={`${profile.name} Avatar`}
+                      className="object-cover"
+                    />
+                    <AvatarFallback className="bg-secondary text-secondary-foreground text-xl">
+                      {profile.name.charAt(0)}
+                    </AvatarFallback>
+                  </Avatar>
+                  
+                  <div className="flex-1 min-w-0">
+                    <h2 className="text-xl font-semibold text-card-foreground mb-1">
+                      {profile.name}
+                    </h2>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      {profile.description}
+                    </p>
+                    
+                    <Link 
+                      href={profile.profileLink} 
+                      target="_blank"
+                      className="inline-flex items-center space-x-2 text-primary hover:text-primary/80 font-medium text-sm group-hover:underline"
+                    >
+                      <span>View Profile</span>
+                      <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    </Link>
+                  </div>
                 </div>
-              </div>
-              
-              <Link 
-                href={profile.profileLink} 
-                target="_blank" 
-                className="w-full sm:w-auto"
-                passHref
-              >
-                <button className="flex items-center justify-center space-x-1 text-blue-600 hover:text-blue-800 transition-colors duration-200 text-sm font-medium hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded px-4 py-2 bg-blue-100 w-full sm:w-auto">
-                  <span>View Profile</span>
-                  <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    viewBox="0 0 24 24" 
-                    className="w-4 h-4"
-                  >
-                    <path d="M13 5l7 7-7 7M5 12h14" />
-                  </svg>
-                </button>
-              </Link>
-            </li>
+              </CardContent>
+            </Card>
           ))}
-        </ul>
+        </div>
       </div>
     </div>
   );
