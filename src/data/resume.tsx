@@ -18,6 +18,7 @@ export const DATA = {
     "React.js",
     "Next.js",
     "JavaScript",
+    "Typescript",
     "Node.js",
     "Express.js",
     "MongoDB",
@@ -89,12 +90,46 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Threadscape",
+      href: "https://thread-app-ps7h.vercel.app/",
+      dates: "December 2024 - December 2024",
+      active: true,
+      description:
+        "Developed Threadscape, a collaborative discussion platform built with Next.js, allowing users to easily manage threads and communities. Features include effortless thread creation, updates, and deletions, secure authentication via Clerk, and real-time updates with notifications. Users can search for others by username, manage their profiles, and track activity. Community creation and email invitations foster engaging discussions.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "MongoDB",
+        "TailwindCSS",
+        "JWT",
+        "Bcrypt",
+        "Shadcn UI",
+        "ZOD",
+        "REST API",
+        "Clerk"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://thread-app-ps7h.vercel.app/",
+          icon: <Icons.globe className="size-3" />
+        },
+        {
+          type: "Source",
+          href: "https://github.com/Abiral-2724/ThreadScape-app",
+          icon: <Icons.github className="size-3" />
+        }
+      ],
+      image: "",
+      video: "https://res.cloudinary.com/dci6nuwrm/video/upload/v1735815701/Screen_Recording_2025-01-02_at_4.26.35_PM_f6hnww.mov"
+    },
+    {
       title: "Mystery Message",
-      href: "https://jobportal-youtube.onrender.com/",
+      href: "https://ananomous-message-nextjs.vercel.app/",
       dates: "November 2024 - December 2024",
       active: true,
       description:
-        "Developed a full-stack job portal website using the MERN stack, allowing users to browse and apply for jobs while enabling admins to register companies and post job openings. Implemented user authentication, advanced search, and filtering by location, salary, and job type. Built a secure backend API with Node.js, Express, and MongoDB.",
+       "Developed Mystry Message, a secure messaging platform built with Next.js, Zod, and NextAuth, allowing users to send and receive messages securely. Features include secure user authentication via email-based verification, the ability to send messages to specific users, and a user dashboard to view all received messages. Users can manage their inbox by deleting unwanted messages and control their settings to accept or delete incoming messages.",
       technologies: [
         "Next.js",
         "TypeScript",
@@ -110,17 +145,17 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://github.com/Abiral-2724/Ananomous-message-Nextjs.git",
+          href: "https://ananomous-message-nextjs.vercel.app/",
           icon: <Icons.globe className="size-3" />
         },
         {
           type: "Source",
-          href: "https://github.com/Abiral-2724/Ananomous-message-Nextjs.git",
+          href: "https://github.com/Abiral-2724/Anonymous-message-Nextjs",
           icon: <Icons.github className="size-3" />
         }
       ],
       image: "",
-      video: "https://res.cloudinary.com/dgxtctnut/video/upload/v1728882074/jskw8tnny40rthd5chdh.mov"
+      video: "https://res.cloudinary.com/dci6nuwrm/video/upload/v1735816070/Screen_Recording_2025-01-02_at_4.24.09_PM_x0bqsb.mov"
     },
     {
       title: "Job Hunt",
