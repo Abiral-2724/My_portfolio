@@ -124,6 +124,41 @@ export const DATA = {
       video: "https://res.cloudinary.com/dci6nuwrm/video/upload/v1735815701/Screen_Recording_2025-01-02_at_4.26.35_PM_f6hnww.mov"
     },
     {
+      title: "TalkSpace",
+      href: "https://video-calling-qn3twd8le-abiral2724s-projects.vercel.app/",
+      dates: "December 2024 - January 2025",
+      active: true,
+      description:
+      "TalkSpace is an innovative web application built using the Next.js framework, designed to make virtual communication seamless and efficient. The platform empowers users to create and join online meetings effortlessly, share meeting links, and access recordings of past sessions for future reference.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "MongoDB",
+        "TailwindCSS",
+        "JWT",
+        "Bcrypt",
+        "Shadcn UI",
+        "ZOD",
+        "REST API",
+        "Clerk",
+        "Stream"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://video-calling-qn3twd8le-abiral2724s-projects.vercel.app/",
+          icon: <Icons.globe className="size-3" />
+        },
+        {
+          type: "Source",
+          href: "https://github.com/Abiral-2724/video-calling-app",
+          icon: <Icons.github className="size-3" />
+        }
+      ],
+      image: "",
+      video: "https://res.cloudinary.com/dci6nuwrm/video/upload/v1737028927/Screen_Recording_2025-01-16_at_5.27.17_PM_p55pa4.mov"
+    },
+    {
       title: "Mystery Message",
       href: "https://ananomous-message-nextjs.vercel.app/",
       dates: "November 2024 - December 2024",
