@@ -51,7 +51,7 @@ export default function Navbar() {
           <Tooltip>
             <TooltipTrigger asChild>
               <Link
-                href="https://drive.google.com/file/d/16XXB8BGk6yUe_tA_AzOkfkpFg7rhIqXN/view?usp=sharing" // Replace with actual resume path
+                href="https://drive.google.com/file/d/108vSIw7V9UtwOezCJ6O54erUK6LTv3IB/view?usp=sharing" // Replace with actual resume path
                 download="resume.pdf"
                 className={cn(
                   buttonVariants({ variant: "ghost", size: "icon" }),
